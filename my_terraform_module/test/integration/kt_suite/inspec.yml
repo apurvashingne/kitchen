@@ -1,0 +1,14 @@
+name: kt_suite
+depends:
+  - name: inspec-gcp
+    git: https://github.com/inspec/inspec-gcp.git
+    tag: v1.8.0
+supports:
+  - platform: gcp
+inputs:
+  - name : 'searce-playground-v1'
+    required: true
+    type: string
+
+
+

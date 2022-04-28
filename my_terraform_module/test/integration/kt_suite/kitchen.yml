@@ -1,0 +1,22 @@
+---
+driver:
+  name: terraform
+  root_module_directory: test/fixtures/tf_module
+
+provisioner:
+  name: terraform
+
+verifier:
+  name: terraform
+  format: documentation
+  systems:
+    - name: kt_suite
+      backend: gcp
+      controls:
+        - instance
+
+platforms:
+  - name: gcp
+
+suites:
+  - name: kt_suite
